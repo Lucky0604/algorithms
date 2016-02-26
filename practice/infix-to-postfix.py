@@ -33,4 +33,4 @@ def infix_to_postfix(infix_expr):
         postfix_list.append(op_stack.pop())
     return " ".join(postfix_list)
 
-print(infix_to_postfix("A+B*C+D"))
+print(infix_to_postfix("A + B * C + D"))

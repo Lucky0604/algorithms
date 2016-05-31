@@ -1,0 +1,8 @@
+* Linear data structure
+** Stack
+*** understanding stack
+LIFO - last in first out
+
+** Queues
+*** queue
+FIFO - first in first out

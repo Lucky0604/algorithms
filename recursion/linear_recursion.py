@@ -23,3 +23,27 @@ def reverse(S, start, stop):
 S = [2,3,5,1]
 reverse(S, 0, 3)
 print(S)    # [5, 3, 2, 1]
+
+
+# recursive algorithms for computing powers
+def power(x, n):
+    '''compute the value x ** n for integer n'''
+    if n == 0:
+        return 1
+    else:
+        return x * power(x, n - 1)
+
+print(power(4, 3))
+
+def power_better(x, n):
+    '''compute the value x ** n for integer n.'''
+    if n == 0:
+        return 1
+    else:
+        partial = power_better(x , n // 2)    # rely on truncated division
+        result = partial * partial
+        if n % 2 == 1:    # if n odd, include extra factor of x
+            result *= x
+        return result
+
+print(power_better(4, 4))
